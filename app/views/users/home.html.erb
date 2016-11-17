@@ -1,0 +1,16 @@
+<h1>Users</h1>
+<ul>
+<% @users.each do |user| %>
+	<li>
+		<% if user.name.present? %>
+		<%= user.name %>
+		<% end %>
+		<% if user.email_address.present? %>
+		- <%= user.email_address %>
+		<% end %>
+		<%= link_to "profile", "/show/#{user.id}" %> -
+		<%= link_to('Delete', "/users/#{user.id}", method: :delete, data: {confirm: 'Are you sure?'}) %>
+	</li>
+<% end %>
+</ul>
+<%= link_to "new user", "/new", class: "sumbit-contact" %>

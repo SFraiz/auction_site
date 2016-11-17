@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+ get '/', to: 'users#home'
+ get '/new', to: 'users#new'
+ post '/users', to: 'users#create'
+ get '/users', to: 'users#home'
+ get '/show/:id', to: 'users#show'
+ delete '/users/:id', to: 'users#destroy'
 end
