@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-	has_many :products
 	
 	def home
 		@users = User.all

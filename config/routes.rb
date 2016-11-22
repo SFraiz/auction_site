@@ -5,4 +5,9 @@ Rails.application.routes.draw do
  get '/users', to: 'users#home'
  get '/show/:id', to: 'users#show'
  delete '/users/:id', to: 'users#destroy'
+ get '/products', to: 'products#index'
+
+
+
+
 end

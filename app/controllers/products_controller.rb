@@ -1,3 +1,6 @@
 class ProductsController < ApplicationController
-	belongs_to :user
+	def index
+		
+		@products = Product.all
+	end
 end
